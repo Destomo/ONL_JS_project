@@ -1,106 +1,106 @@
-                /*Styles*/
-.nav-list {
-        /*Первый список*/
+            /*All styles*/
+
+
+*{
     margin: 0;
     padding: 0;
-    font-size: 0;
+    box-sizing: border-box;
 }
 
-.list-item {
-        /*Элементы первого списка*/
-    list-style-type: none;
-    display: inline-block;
-    position: relative;
-    background-color: rgb(255, 128, 0);
-    padding: 20px;
-}
-
-.link {
-        /*Сылки*/
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
+h1{
     width: 100%;
+    text-align: center;
+    margin-top: 11%;
 }
 
-.sub-nav-list {
-        /*Второй список*/
-    position: absolute;
-    top: 63px;
-    left: -40px;
-    display: block;
+                    /*Main box styles*/
 
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-top: 1%;
 }
 
-.sub-list-item {
-        /*Элементы Второго списка*/
-    display: none;
+.card{
+    display: flex;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 5%;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1%;
+}
+
+.card-title{
+    font-weight: bold;
+    color: rgb(228, 38, 202);
+    margin-bottom: 2%;
+}
+
+.card-rating{
+ margin-bottom: 2%;
+}
+
+.card-price{
+    font-size: 18px;
+    margin-bottom: 2%;
+}
+
+.add-to-reserv{
+    background-color: rgb(228, 38, 202);
+    color: white;
+    border: none;
+    padding: 2%;
+    font-size: 16px;
+    border-radius: 15%;
+}
+
+.add-to-reserv:hover{
+    background-color: deepskyblue;
+}
+
+.card:hover{
+    border-color: deepskyblue;
+}
+
+.card-title:hover{
+    color: deepskyblue;
+}
+
+                /*Nav-box styles*/
+
+.nav-box{
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.nav-list{
+    display: flex;
     list-style-type: none;
-    background-color: rgb(255, 128, 0);
-    padding: 20px;
 }
 
-.sub-sub-nav-list{
-        /*Третий список*/
-    position: absolute;
-    display: block;
-    top: 128px;
-    left: 154px;
+.nav-item{
+    margin: 20px;
 }
-
-.sub-sub-list-item{
-        /*Элементы третьего списка*/
-    display: none;
-    list-style-type: none;
-    background-color: rgb(255, 128, 0);
-    padding: 20px;
+.link{
+    text-decoration: none;
+    color: aquamarine;
 }
-
-.sub-sub-sub-nav-list{
-    /*Третий список*/
-position: absolute;
-display: block;
-top: 128px;
-left: 153px;
-}
-
-.sub-sub-sub-list-item{
-    /*Элементы третьего списка*/
-display: none;
-list-style-type: none;
-background-color: rgb(255, 128, 0);
-padding: 20px;
-}
-
-.wordpress-ul{
-    position: absolute;
-    display: block;
-    left: -40px;
-    top: 63px;
-}
-.wordpress-li{
-    display: none;
-    list-style: none;
-    background-color: rgb(255, 128, 0);
-    padding: 20px;
-}
-
-                /*Псевдо классы*/
-.list-item:hover .sub-list-item {
-    display: block;
-}
-
-.sub-list-item:hover .sub-sub-list-item {
-    display: block;
-}
-
-.sub-sub-list-item:hover .sub-sub-sub-list-item {
-    display: block;
-}
-.list-item:hover .wordpress-li{
-    display: block;
-}
-
-li:hover{
-    background-color: rgb(168, 86, 9);
+.link:hover{
+    border-bottom: 3px dashed aquamarine;
 }
