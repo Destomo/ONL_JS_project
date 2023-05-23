@@ -69,14 +69,14 @@ button{
 
 footer{
     width: 100%;
-    height: auto;
+    height: 150px;
     display: flex;
     flex-direction: row;
 }
 
 footer > section{
     width: 33%;
-    height: 100px;
+    height: 100%;
 }
 
 .footer-sec-1-3{
@@ -100,13 +100,17 @@ button:hover{
 
 /*Media Styles*/
 
-@media screen and (min-width: 1px) and (max-width: 500px) {
+@media screen and (min-width: 200px) and (max-width: 330px) {
     h1{
         font-size: 3.5em;
     }
 
     p{
         font-size: 1em;
+    }
+
+    footer{
+        height: 675px;
     }
 
     .section-1{
@@ -118,13 +122,17 @@ button:hover{
     }
 }
 
-@media screen and (min-width:501px) and (max-width:850px) {
+@media screen and (min-width: 331px) and (max-width: 380px) {
     h1{
         font-size: 3.5em;
     }
 
     p{
         font-size: 1em;
+    }
+
+    footer{
+        height: 615px;
     }
 
     .section-1{
@@ -135,13 +143,326 @@ button:hover{
         height: auto;
     }
 }
-@media screen and (min-width:850px) and (max-width:1570px){
+
+@media screen and (min-width: 381px) and (max-width: 400px) {
     h1{
         font-size: 3.5em;
     }
 
     p{
         font-size: 1em;
+    }
+
+    footer{
+        height: 540px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 450px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 490px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:451px) and (max-width:500px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 450px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:550px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 400px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:551px) and (max-width:600px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 370px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:650px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 320px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:651px) and (max-width:700px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 300px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:701px) and (max-width:800px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 250px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:850px) {
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 220px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:851px) and (max-width:1000px){
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 200px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:1001px) and (max-width:1200px){
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 180px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:1201px) and (max-width:1400px){
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 150px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:1401px) and (max-width:1800px){
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 150px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:1801px) and (max-width:2100px){
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 110px;
+    }
+
+    .section-1{
+        height: auto;
+    }
+
+    .section-2{
+        height: auto;
+    }
+}
+
+@media screen and (min-width:2101px) and (max-width:2550px){
+    h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+    footer{
+        height: 90px;
     }
 
     .section-1{
