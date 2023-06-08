@@ -1,35 +1,26 @@
-function isNumber(value) {
-    return !isNaN(parseFloat(value)) && isFinite(value);
+  function Stairs() {
+    this.currentStair = 0;
   }
 
-  let number1, number2, number3;
   
-  do {
-    number1 = prompt("Введите первое число:");
-  } while (!isNumber(number1));
-  
-  do {
-    number2 = prompt("Введите второе число:");
-  } while (!isNumber(number2));
-  
-  do {
-    number3 = prompt("Введите третье число:");
-  } while (!isNumber(number3));
+  let luder = new Stairs();
 
-  number1 = parseFloat(number1);
-  number2 = parseFloat(number2);
-  number3 = parseFloat(number3);
 
-  var maxNumber = number1; 
+  function lp () {
 
-  if (number2 > maxNumber) {
-    maxNumber = number2; 
+    this.up = function (){
+        this.currentStair++;
+    }
+
+    this.down = function (){
+        if (this.currentStair > 0) {
+            this.currentStair--;
+        }
+    }
+
+    this.ShowStair = function () {
+        return this.currentStair;
+    }
+
   }
-  
-  if (number3 > maxNumber) {
-    maxNumber = number3; 
-  }
-
-  console.log("Наибольшее число: " + maxNumber);
-
-  
+  Stairs.prototype = new lp();
