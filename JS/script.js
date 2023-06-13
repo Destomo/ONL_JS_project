@@ -1,26 +1,40 @@
-  function Stairs() {
-    this.currentStair = 0;
-  }
+'use strick'
 
+/**
+ * 
+ * @param  {...any} numbers 
+ * @return {number}
+ */
+function sumPositiveNumbers(...numbers) {
+    for (let number of numbers) {
+      if (number < 0) {
+        throw new RangeError("Одно или несколько чисел минусовые!");
+      }
+    }
   
-  let luder = new Stairs();
-
-
-  function lp () {
-
-    this.up = function (){
-        this.currentStair++;
+    let result = 0;
+    for (let number of numbers) {
+      result += number;
     }
-
-    this.down = function (){
-        if (this.currentStair > 0) {
-            this.currentStair--;
-        }
-    }
-
-    this.ShowStair = function () {
-        return this.currentStair;
-    }
-
+  
+    return result;
   }
-  Stairs.prototype = new lp();
+
+
+
+/*
+function sumPositiveNumbers(...numbers) {
+    let result = 0;
+  
+    for (let number of numbers) {
+      if (number < 0) {
+        const error = new RangeError("Одно или несколько чисел минусовые!");
+        console.log(error);
+      }
+  
+      result += number;
+    }
+  
+    return result;
+}
+*/
