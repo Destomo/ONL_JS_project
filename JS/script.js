@@ -1,40 +1,50 @@
-'use strick'
-
-/**
- * 
- * @param  {...any} numbers 
- * @return {number}
- */
-function sumPositiveNumbers(...numbers) {
-    for (let number of numbers) {
-      if (number < 0) {
-        throw new RangeError("Одно или несколько чисел минусовые!");
+class Animal {
+    constructor() {
+      this.children = [];
+    }
+  
+    setChildren(children) {
+      this.children = children;
+    }
+  
+    countTotalAnimals() {
+      let count = 1; // Початкова кількість 
+      for (const child of this.children) {
+        count += child.countTotalAnimals(); 
       }
+      return count;
     }
-  
-    let result = 0;
-    for (let number of numbers) {
-      result += number;
-    }
-  
-    return result;
   }
-
-
-
-/*
-function sumPositiveNumbers(...numbers) {
-    let result = 0;
-  
-    for (let number of numbers) {
-      if (number < 0) {
-        const error = new RangeError("Одно или несколько чисел минусовые!");
-        console.log(error);
-      }
-  
-      result += number;
+  class Cow extends Animal {
+    constructor() {
+      super();
     }
+  }
+  class Goat extends Animal {
+    constructor() {
+      super();
+    }
+  }
+  class Cat extends Animal {
+    constructor() {
+      super();
+    }
+  }
+  class Dog extends Animal {
+    constructor() {
+      super();
+    }
+  }
   
-    return result;
-}
-*/
+  const farm = [];
+
+  const cow = new Cow();
+  const goat = new Goat();
+  const cat = new Cat();
+  const dog = new Dog();
+  
+  farm.push(cow, goat, cat, dog);
+
+  const totalAnimalsCount = farm.reduce((count, animal) => count + animal.countTotalAnimals(), 0);
+  
+  console.log("Загальна кількість тварин на фермі:", totalAnimalsCount);
