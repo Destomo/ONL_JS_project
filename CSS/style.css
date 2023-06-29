@@ -1,5 +1,17 @@
-img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+#game-field{
+    background-color: aquamarine;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+#box{
+    width: 45px;
+    height: 45px;
+    background-color: darkblue;
+   /* border-radius: 50%; */
+    border: 2px solid black;
+    box-sizing: border-box;
+    position: absolute;
 }

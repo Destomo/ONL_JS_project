@@ -1,26 +1,26 @@
-const [btn1, btn2] = document.querySelectorAll('button');
+const field = document.querySelector('#game-field'); // ПОЛЕ
 
-btn1.addEventListener('click', clickHandler);
-btn2.addEventListener('click', clickHandler);
+const box = document.querySelector('#box'); // МЯЧ
 
-function clickHandler( {target} ) {
-    const img = target.parentNode.children[0];
-    img.setAttribute('src', target.dataset.src);
+field.addEventListener('mousemove', moveBox);
+
+function moveBox(event) {
+  const { clientX, clientY } = event;
+
+  const fieldRect = field.getBoundingClientRect();
+  const boxSize = box.offsetWidth;
+
+  // Рассчитываем позицию мяча относительно игрового поля
+  const boxX = clientX - fieldRect.left - boxSize / 2;
+  const boxY = clientY - fieldRect.top - boxSize / 2;
+
+  // Ограничиваем движение мяча в пределах игрового поля
+  const maxX = field.offsetWidth - boxSize;
+  const maxY = field.offsetHeight - boxSize;
+  const restrictedX = Math.max(0, Math.min(boxX, maxX));
+  const restrictedY = Math.max(0, Math.min(boxY, maxY));
+
+  // Обновляем позицию мяча
+  box.style.left = `${restrictedX}px`;
+  box.style.top = `${restrictedY}px`;
 }
-
-
-/*
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
-const image = document.getElementById('image');
-
-button1.addEventListener('click', function() {
-  const imageURL = button1.getAttribute('data-link');
-  imageURL.setAttribute('src', sakura-hous.jpg);
-});
-
-button2.addEventListener('click', function() {
-  const imageURL = button2.getAttribute('data-link');
-  imageURL.setAttribute('src', sakura-moun.jpg);
-});
-*/
