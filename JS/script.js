@@ -1,50 +1,26 @@
-class Animal {
-    constructor() {
-      this.children = [];
-    }
-  
-    setChildren(children) {
-      this.children = children;
-    }
-  
-    countTotalAnimals() {
-      let count = 1; // Початкова кількість 
-      for (const child of this.children) {
-        count += child.countTotalAnimals(); 
-      }
-      return count;
-    }
-  }
-  class Cow extends Animal {
-    constructor() {
-      super();
-    }
-  }
-  class Goat extends Animal {
-    constructor() {
-      super();
-    }
-  }
-  class Cat extends Animal {
-    constructor() {
-      super();
-    }
-  }
-  class Dog extends Animal {
-    constructor() {
-      super();
-    }
-  }
-  
-  const farm = [];
+const [btn1, btn2] = document.querySelectorAll('button');
 
-  const cow = new Cow();
-  const goat = new Goat();
-  const cat = new Cat();
-  const dog = new Dog();
-  
-  farm.push(cow, goat, cat, dog);
+btn1.addEventListener('click', clickHandler);
+btn2.addEventListener('click', clickHandler);
 
-  const totalAnimalsCount = farm.reduce((count, animal) => count + animal.countTotalAnimals(), 0);
-  
-  console.log("Загальна кількість тварин на фермі:", totalAnimalsCount);
+function clickHandler( {target} ) {
+    const img = target.parentNode.children[0];
+    img.setAttribute('src', target.dataset.src);
+}
+
+
+/*
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
+const image = document.getElementById('image');
+
+button1.addEventListener('click', function() {
+  const imageURL = button1.getAttribute('data-link');
+  imageURL.setAttribute('src', sakura-hous.jpg);
+});
+
+button2.addEventListener('click', function() {
+  const imageURL = button2.getAttribute('data-link');
+  imageURL.setAttribute('src', sakura-moun.jpg);
+});
+*/
